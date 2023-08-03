@@ -65,7 +65,7 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
 | Id  | representa uma dupla, loja e data, dentro do dataset |
 | Store | identificador único para cada loja |
 | DayOfWeek | dia da semana |
-| Date | datae |
+| Date | data |
 | Customers |  número de clientes em um determinado dia |
 | Open | indicador de se a loja estava aberta ou fechada: 0 = fechada, 1 = aberta |
 | Promo | indica se a loja está executando uma promoção naquele dia |
