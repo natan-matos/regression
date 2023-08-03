@@ -1,21 +1,20 @@
-<img align="right" width="100" height="100" src="img/rossmann-logo.png"/>
+<img align="right" width="100" height="100" src="img/logo.png"/>
 
-# Rossmann Sales Prediction Project
+# Previsão de Vendas Lojas Rossmann
 
-Regression Project
+Projeto de Regressão
 
-## 1. Business Problem
-Sales forecasting refers to the process of estimating demand for or sales of over a specific period of time. It can improve financial performance of any kind of business and in a major company as Rossmann it is particular import because any variation in demand could impact all stores at once. A accurate sales forecast could reduce stock and wast, as well as in-store availability issues.
+## 1. Problema de Negócio
 
-Rossmann is one of the largests drug store chains in Europe owning over 3,000 stores across Germany, Poland, Hungary, the Czech Republic, Turkey, Albania, Kosovo. This problem set was coming from a Kaggle competition driven by Rossmann itself in 2015. The main goal was to predict each store daily sales for up to six weeks in advance. The dataset contains sales from 1115 stores in diferent days from 2013-01-01 to 2015-07-31, and other factors such as holidays, promotions and competion.
+Rossmann é uma das maiores redes de farmácias na Europa, com mais de 3,000 lojas em vários países. Este projeto teve início em uma competição no Kaggle, levantado pela própria Rossmann, em 2015. O objetivo principal é realizar a previsão do total de vendas para cada uma das 1115 lojas nas próximas 6 semanas.
 
-As part of "DS em Produção" course in "Comunidade DS" this problem was incremented with some more **fictional data** as is descripted below:
+Como parte da disciplina 'Data Science em Produção', da Comunidade DS, foi adicionado um contexto ficional, descrito abaixo, para agregar mais intensidade ao projeto.
 
->Pretend you are a data scientist in Rossmann company. Suddenly a lot of messages pops up at your screen, reading all you figured 	out they all have the same demading: the store sales prediction for 6 weeks in advance. It seems all store managers were asked by the CFO of the company to have this prediction by the end of the month. You go talk to the CFO to undertand what is the real problem and if this prediction it is the bst solution. CFO tells you that Rossmann is going throught an expansion and needs to estimate accurately the amount of money they will loan from banks, they plan to use the part of the income from the next 6 weeks as part of the expansion investment. After that you agreed that the prediction makes sense and you can create a unique solution for all the stores. He went thrilled by the idea and also ask you to create a way the solution could be accessed by any store manager at any time and returns intantaneously the sales prediction for the store, so they can use in other occasions.
+> Vocẽ é cientista de dados na Rossmann. Após a reunião mensal dos gerentes de lojas com o CFO da empresa, foi pedido a eles uma previsão de vendas para as próximas 6 semenas. Foi estipulado um tempo de 15 dias para que os gerentes apresentem o resultado. Como o tempo é muito curto, eles decidiram pedir ajuda para o time de Data Science da empresa. Após conversar como CFO, para entender a raiz do problema e descobrir se uma previsão realmente é a melhor solução, você descobriu que a empresa vai entrar em processo de expansão, e como parte do processo, foi decidido que a renda das próximas 6 semanas serão usadas como investimento. Além disso ele te pediu para criar alguma forma de visualização que ele pudesse acessar facilmente a qualquer momento.
 
-| Problem | Root Cause | Main Question |
+| Problema | Causa Raiz | Questão principal |
 | --- | --- | --- |
-| How much money company need to loan | Company expansions | What will be the sales day by day in each store for next six weeks? |
+| Quanto dinheiro haverá disponível | Expansão da empresa | Qual será o total de vendas nas próximas 6 semanas? |
 
 ## 2. Business Assumptions
 - Stores with no competition distance information does not have nearby competitors, so we will consider a distance to high to be relevant.
