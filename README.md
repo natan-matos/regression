@@ -52,7 +52,7 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
 * **Passo 09:** Avaliação e Interpretação do Erro: converter o a performance do modelo de Machine Learnig em resultados de negócio.
 * **Passo 10:** Deploy do model em produçãp: publicar o modelo em um ambiente de nuvem para que os envolvidos no projeto consigam acessar os resultados e melhorar suas decições de negócio.
     
-# 4. Data Collect
+# 4. Coleta de Dados
 
 - **Dataset foi coletado no Kaglle: [clique aqui](https://www.kaggle.com/competitions/rossmann-store-sales‘)**
     
@@ -80,17 +80,10 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
 | Sales | volume de vendas para determinado dia  |
 
 
-- All rows missing competition_distance also missed competition_since_month/year
-- Column 'is_promo' is created to tells if the day is in promo or not.
     
 ## 5. Top 5 Insights
 
-### 5.1. Hypothesis Mindmap
-A mindmap of hypothesis was created together with business team (marketing, saled, product) to create hypothesis about the problem. This step is important to look for important insights that will help find the best solution.
-
-<img src="img/MindMapHypothesis.png" style="zoom:100%;" />
-
-### 5.2. Insights
+### 5.1. Insights
 
 From all hypothesis, it will only be taken in consideration those who have data available. Thus, hypothesis about customers or location were not added to the analysis. A total of 10 hypothesis we evaluated and at the end we could validate 5 important insights.
 
