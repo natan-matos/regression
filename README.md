@@ -8,7 +8,7 @@ Projeto de Regressão
 
 Rossmann é uma das maiores redes de farmácias na Europa, com mais de 3,000 lojas em vários países. Este projeto teve início em uma competição no Kaggle, levantado pela própria Rossmann, em 2015. O objetivo principal é realizar a previsão do total de vendas para cada uma das 1115 lojas nas próximas 6 semanas.
 
-Como parte da disciplina 'Data Science em Produção', da Comunidade DS, foi adicionado um contexto ficional, descrito abaixo, para agregar mais intensidade ao projeto.
+Como parte da disciplina 'Data Science em Produção', da Comunidade DS, foi adicionado um contexto ficcional, descrito abaixo, para agregar mais intensidade ao projeto.
 
 > Vocẽ é cientista de dados na Rossmann. Após a reunião mensal dos gerentes de lojas com o CFO da empresa, foi pedido a eles uma previsão de vendas para as próximas 6 semenas. Foi estipulado um tempo de 15 dias para que os gerentes apresentem o resultado. Como o tempo é muito curto, eles decidiram pedir ajuda para o time de Data Science da empresa.
 > Após conversar com o CFO, para entender a raiz do problema e descobrir se uma previsão realmente é a melhor solução, você descobriu que a empresa vai entrar em processo de expansão. Como parte do planejamento, foi decidido que a renda das próximas 6 semanas será usadas como investimento para a expansão. Além disso ele te pediu para criar alguma forma de visualização que ele e os gerentes de lojas pudessem acessar facilmente a qualquer momento.
@@ -67,7 +67,7 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
 | DayOfWeek | dia da semana |
 | Date | data |
 | Customers |  número de clientes em um determinado dia |
-| Open | indicador de se a loja estava aberta ou fechada: 0 = fechada, 1 = aberta |
+| Open | indicador de que a loja estava aberta ou fechada: 0 = fechada, 1 = aberta |
 | Promo | indica se a loja está executando uma promoção naquele dia |
 | SchoolHoliday |  indica se a Loja foi afetado pelo fechamento das escolas públicas. |
 | StateHoliday | indica um feriado estadual. Normalmente, todas as lojas, com poucas exceções, estão fechadas em feriados estaduais. |
