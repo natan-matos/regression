@@ -17,7 +17,7 @@ Como parte da disciplina 'Data Science em Produção', da Comunidade DS, foi adi
 | --- | --- | --- |
 | Quanto dinheiro haverá disponível | Expansão da empresa | Qual será o total de vendas nas próximas 6 semanas? |
 
-## 2. Business Assumptions
+## 2. Suposições de Negócio
 - Considerei que a variável 'customer' é uma variável indisponível. Ela possui alta correlação com as vendas, mas não tenho acesso a previsão do número de clientes para as próximas semanas.
 - Lojas com dados de 'competition_distance' indisponíveis são consideradas como não tendo competidores.
 - Algumas lojas têm concorrêntes próximos, mas não têm o dado 'competition_since_month/year'. Irei considerar essa data como data de vendas mais antiga.
@@ -25,7 +25,7 @@ Como parte da disciplina 'Data Science em Produção', da Comunidade DS, foi adi
 
 
 ## 3. Desenvolvimento da Solução
-### 3.1. Produto Finla
+### 3.1. Produto Final
 - Um reporte em csv com as previsões de todas as lojas.
 - Bot no Telegram acessado por API
 
@@ -35,52 +35,49 @@ Como parte da disciplina 'Data Science em Produção', da Comunidade DS, foi adi
 - Telegram, API Flask
 - Git, Github
 
-### 3.3. Process
+### 3.3. Processo
 O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a sigla apra Cross Industry Process - Data Mining. É uma metodologia ágil que fornece uma estrutura robusta para planejamento de projetos de Machine Learning. Funciona como um processo cíclico, focado em entrega incremental a cada novo ciclo.
 
 
 <img src="img/crisp-dm.png" style="zoom:100%;" />
 
-* **Step 01:** Data description: clean data and use descriptive statistics to identify errors and unusual behaviours.
-* **Step 02:** Feature engineering: derivate new attributes to better represent problem.
-* **Step 03:** Variable filtering: remove unnecessary rows and columns and not available features.
-* **Step 04:** Exploratory data analysis: find insights and understand the impact of variables on model learning.
-* **Step 05:** Data preparation: prepare the data so that the Machine Learning models can learn the specific behavior.
-* **Step 06:** Feature selection: selection of the most significant attributes for training the model.
-* **Step 07:** Machine learning modelling: test different models, apply cross validation and compare real performance.
-* **Step 08:** Hyperparameter fine tunning: choose the best values for each of the parameters of the model selected from the previous step.
-* **Step 09:** Error evaluation and interpretation: convert the performance of the Machine Learning model into a business result.
-* **Step 10:** Deploy model to production: publish the model in a cloud environment so that other people or services can use the results to improve the business decision.
+* **Passo 01:** Descrição dos Dados: limpeza e descrição estatistica dos dados, afim de encontrar erros e comportamentos incomuns.
+* **Passo 02:** Feature engineering: derivação de novas features, para modelar melhor o fenômeno.
+* **Passo 03:** Filtragem de variáveis: remover linhas e colunas não necessárias para o modelo.
+* **Passo 04:** Análise Exploratória de Dados: validação de hipóteses, busca por insights e entender melhor o impacto das variáveis no fenômeno.
+* **Passo 05:** Preparação dos Dados: adequação dos dados para que o modelo de Machine Learning possa aprender corretamente.
+* **Passo 06:** Seleção de Variáveis: selecionar as features mais significantes para treinar o modelo.
+* **Passo 07:** Modelagem do Modelo: testar diferentes algoritmos de Machine Learning e comparar os resultados, afim de escolher um que perfome melhor para o conjunto de dados.
+* **Passo 08:** Fine Tunnig: escolher os melhores valores para os hiperparâmetros do modelo selecionado anteriormente.
+* **Passo 09:** Avaliação e Interpretação do Erro: converter o a performance do modelo de Machine Learnig em resultados de negócio.
+* **Passo 10:** Deploy do model em produçãp: publicar o modelo em um ambiente de nuvem para que os envolvidos no projeto consigam acessar os resultados e melhorar suas decições de negócio.
     
 # 4. Data Collect
 
-- **Dataset was collected from Kaggle: [here](https://www.kaggle.com/competitions/rossmann-store-sales‘)**
+- **Dataset foi coletado no Kaglle: [clique aqui](https://www.kaggle.com/competitions/rossmann-store-sales‘)**
     
-	It contains sales for 1,115 Rossmann stores. Some stores in the dataset were temporarily closed for refurbishment.
+	O Dataset contêm dados histórcios de vendas de 1,115 lojas, algumas das quais foram fechadas temporariamente para reforma.
     
-- **The dataset has 19 attributes listed below:**
+- **O dataset contêm 19 atributos**
 
-| Item | Description |
+| Item | Descrição |
 | --- | --- |
-| id  | an Id that represents a (Store, Date) duple within the test set |
-| store | a unique Id for each store |
-| day_of_week | day of the week |
-| date | date |
-| sales | the turnover for any given day (this is what you are predicting)  |
-| customers |  the number of customers on a given day |
-| open | an indicator for whether the store was open: 0 = closed, 1 = open |
-| promo | indicates whether a store is running a promo on that day |
-| state_holiday | indicates a state holiday. Normally all stores, with few exceptions, are closed on state holidays. Note that all schools are closed on public holidays and weekends. a = public holiday, b = Easter holiday, c = Christmas, 0 = None |
-| school_holiday |  indicates if the (Store, Date) was affected by the closure of public schools |
-| store_type | differentiates between 4 different store models: a, b, c, d |
-| assortment | describes an assortment level: a = basic, b = extra, c = extended |
-| competition_distance | distance in meters to the nearest competitor store |
-| competition_open_since_month | gives the approximate year and month of the time the nearest competitor was opened |
-| competition_open_since_year | gives the approximate year and month of the time the nearest competitor was opened |
-| promo2 | Promo2 is a continuing and consecutive promotion for some stores: 0 = store is not participating, 1 = store is participating |
-| promo2_since_week | describes the year and calendar week when the store started participating in Promo2 |
-| promo2_since_year | describes the year and calendar week when the store started participating in Promo2 |
-| promo_interval | describes the consecutive intervals Promo2 is started, naming the months the promotion is started anew. E.g. "Feb,May,Aug,Nov" means each round starts in February, May, August, November of any given year for that store |
+| Id  | representa uma dupla, loja e data, dentro do dataset |
+| Store | identificador único para cada loja |
+| DayOfWeek | dia da semana |
+| Date | datae |
+| Customers |  número de clientes em um determinado dia |
+| Open | indicador de se a loja estava aberta ou fechada: 0 = fechada, 1 = aberta |
+| Promo | indica se a loja está executando uma promoção naquele dia |
+| SchoolHoliday |  indica se a Loja foi afetado pelo fechamento das escolas públicas. |
+| StateHoliday | indica um feriado estadual. Normalmente, todas as lojas, com poucas exceções, estão fechadas em feriados estaduais. |
+| Assortment | descreve um nível de sortimento: a = básico, b = extra, c = estendido |
+| CompetitionDistance | distância em metros até a loja concorrente mais próxima |
+| CompetitionOpenSinceMonth/Year | dá o ano e o mês aproximado de quando o concorrente mais próximo foi aberto |
+| Promo2 | é uma promoção contínua e consecutiva para algumas lojas: 0 = loja não está participando, 1 = loja está participando |
+| Promo2SinceWeek/Year | descreve o ano e a semana do calendário em que a loja começou a participar da Promo2 |
+| PromoInterval | descreve os intervalos consecutivos em que o Promo2 é iniciado, nomeando os meses em que a promoção é iniciada novamente. Por exemplo, "Fev, Maio, Agosto, Novembro" significa que cada rodada começa em fevereiro, maio, agosto, novembro de qualquer ano para aquela loja |
+| Sales | volume de vendas para determinado dia  |
 
 
 - All rows missing competition_distance also missed competition_since_month/year
