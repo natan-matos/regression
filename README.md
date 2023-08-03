@@ -92,11 +92,11 @@ Algumas hipóteses de negócio foram levantadas, para serem validadas ou não. N
 | <img src="img/competition_distane.png" style="zoom:60%;" /> |
 
 | **Insight 02 - Lojas com competidores há mais tempo vendem menos** |
-| --- | --- |
+| --- |
 | <img src="img/competition-time.png" style="zoom:60%;" /> | 
 
 | **Insight 03 - Lojas com promoçõe ativas por mais tempo tendem a vender menos** | 
-| --- | --- |
+| --- |
 | <img src="img/promo-time.png" style="zoom:60%;" /> | 
 
 
