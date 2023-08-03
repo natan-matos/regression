@@ -81,23 +81,23 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
 
 
     
-## 5. Top 5 Insights
+## 5. Top 3 Insights
 
 ### 5.1. Insights
 
-From all hypothesis, it will only be taken in consideration those who have data available. Thus, hypothesis about customers or location were not added to the analysis. A total of 10 hypothesis we evaluated and at the end we could validate 5 important insights.
+Algumas hipóteses de negócio foram levantadas, para serem validadas ou não. No total foram levantadas 12 hipóteses, e dentro delas aqui estão os 3 top insights retirados da análise de dados e validação das hipoteses.
 
-| Insight 01 - Stores with the closest competitors sell more |
+| Insight 01 - Lojas com competidores mais próximos vendem mais |
 | --- |
-| <img src="img/hyp01.png" style="zoom:60%;" /> |
+| <img src="img/competition_distane.png" style="zoom:60%;" /> |
 
-| Insight 02 - Stores with long time competitors sell less | Insight 03 - Stores with longer time in promotion sell less |
+| **Insight 02 - Lojas com competidores há mais tempo vendem menos** |
 | --- | --- |
-| <img src="img/hyp02.png" style="zoom:60%;" /> | <img src="img/hyp03.png" style="zoom:60%;" /> |
+| <img src="img/competition-time.png" style="zoom:60%;" /> | 
 
-| Insight 04 - Stores sell less with by the year | Insight 05 - Stores sell less in the second semester of the year. |
+| **Insight 03 - Lojas com promoçõe ativas por mais tempo tendem a vender menos** | 
 | --- | --- |
-| <img src="img/hyp04.png" style="zoom:60%;" /> | <img src="img/hyp05.png" style="zoom:60%;" /> |
+| <img src="img/promo-time.png" style="zoom:60%;" /> | 
 
 
 # 6. Machine Learning Model Applied
