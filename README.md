@@ -54,7 +54,7 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
     
 # 4. Coleta de Dados
 
-- **Dataset foi coletado no Kaglle: [clique aqui](https://www.kaggle.com/competitions/rossmann-store-sales‘)**
+- **Dataset foi coletado no Kaglle: [clique aqui](https://www.kaggle.com/competitions/rossmann-store-sales/overview)**
     
 	O Dataset contêm dados histórcios de vendas de 1,115 lojas, algumas das quais foram fechadas temporariamente para reforma.
     
