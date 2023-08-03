@@ -100,7 +100,7 @@ Algumas hipóteses de negócio foram levantadas, para serem validadas ou não. N
 | <img src="img/promo-time.png" style="zoom:60%;" /> | 
 
 
-# 6. Machine Learning Model Applied
+# 6. Modelo de Machine Learnig Aplicado
 
 After modelling data using encoding and transformation, Boruta was used as a method of feature selection. The variables relevant to model according to Boruta were.
 
