@@ -138,7 +138,7 @@ Neste ponto o modelo já está pronto para ir para produção e ser disponibiliz
 
 Aqui você pode ver o funcionamento da API:
 
-<img src="img/animation.gif" align="center" style="zoom:25%;" />
+<img src="img/animation .gif" align="center" style="zoom:25%;" />
 
 # 9. Business Results
 
