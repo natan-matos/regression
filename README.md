@@ -138,10 +138,11 @@ Neste ponto o modelo já está pronto para ir para produção e ser disponibiliz
 
 Aqui você pode ver o funcionamento da API:
 
-<img src="img/animation .gif" align="center" style="zoom:25%;" />
+<img src="img/Screen_Recording_20230802_163716_Telegram_AdobeExpress_AdobeExpress.gif" align="center" style="zoom:100%;" />
 
-# 9. Business Results
+# 9. Resultados de Negócio
 
+Uma parte importante de qualquer projeto de Data Science é traduzir 
 Considering MAE the best metric to explain performance to business team in absolutes terms, we have calculated worst and best scenario by adding or subtracting MAE from prediction. MAPE is the MAE in percentagem that helps explain relative error.
 
 <img src="img/sample-final-table.png" align="center" style="zoom:100%;" />
