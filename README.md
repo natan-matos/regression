@@ -134,13 +134,11 @@ Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usad
 
 # 8. Deployment
 
-After validation by business team the model was send to production, which means the model need to be available to final user. Throughout an API called 'handler.py created with Flask module, the model saved in previous step and the Rossmann class are requested. Rossmann class is responsable for data preparation and transformation. Deployment arquitecture is represented below.
+Neste ponto o modelo já está pronto para ir para produção e ser disponibilizado para o usuário final. O forma como este produto será entregue é um bot no telegram, onde o usuário insere o número de loja, e recebe as previsões de vendas para as próximas 6 semanas somadas.
 
-<img src="img/deploy-arquitecture.png" align="center" style="zoom:75%;" />
+Aqui você pode ver o funcionamento da API:
 
-Below you can see the telegram app working:
-
-<img src="img/animation.gif" align="left" style="zoom:25%;" />
+<img src="img/animation.gif" align="center" style="zoom:25%;" />
 
 # 9. Business Results
 
