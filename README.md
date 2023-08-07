@@ -59,27 +59,6 @@ O processo de solução do projeto é baseado na metodologia CRISP-DM, que é a 
 	O Dataset contêm dados histórcios de vendas de 1,115 lojas, algumas das quais foram fechadas temporariamente para reforma.
     
 - **O dataset contêm 19 atributos**
-
-| Item | Descrição |
-| --- | --- |
-| Id  | representa uma dupla, loja e data, dentro do dataset |
-| Store | identificador único para cada loja |
-| DayOfWeek | dia da semana |
-| Date | data |
-| Customers |  número de clientes em um determinado dia |
-| Open | indicador de que a loja estava aberta ou fechada: 0 = fechada, 1 = aberta |
-| Promo | indica se a loja está executando uma promoção naquele dia |
-| SchoolHoliday |  indica se a Loja foi afetado pelo fechamento das escolas públicas. |
-| StateHoliday | indica um feriado estadual. Normalmente, todas as lojas, com poucas exceções, estão fechadas em feriados estaduais. |
-| Assortment | descreve um nível de sortimento: a = básico, b = extra, c = estendido |
-| CompetitionDistance | distância em metros até a loja concorrente mais próxima |
-| CompetitionOpenSinceMonth/Year | dá o ano e o mês aproximado de quando o concorrente mais próximo foi aberto |
-| Promo2 | é uma promoção contínua e consecutiva para algumas lojas: 0 = loja não está participando, 1 = loja está participando |
-| Promo2SinceWeek/Year | descreve o ano e a semana do calendário em que a loja começou a participar da Promo2 |
-| PromoInterval | descreve os intervalos consecutivos em que o Promo2 é iniciado, nomeando os meses em que a promoção é iniciada novamente. Por exemplo, "Fev, Maio, Agosto, Novembro" significa que cada rodada começa em fevereiro, maio, agosto, novembro de qualquer ano para aquela loja |
-| Sales | volume de vendas para determinado dia  |
-
-
     
 ## 5. Top 3 Insights
 
@@ -142,41 +121,27 @@ Aqui você pode ver o funcionamento da API:
 
 # 9. Resultados de Negócio
 
-Uma parte importante de qualquer projeto de Data Science é traduzir os perfomance em resultados reais de negócio. Para este projeto, MAE (Mean Absolute Error), foi a métrica escolhida para explicar em valores reais a performance do modelo de Machine Learning. As previsões têm uma margem de erro, para mais ou para menos. Segue abaixo uma tablea, levando em consideração a margem de erro do modelo, apresentando assim o melhor e pior cenário da previsão de vendas.
+Uma parte importante de qualquer projeto de Data Science é traduzir os perfomance em resultados reais de negócio. Para este projeto, MAE (Mean Absolute Error), foi a métrica escolhida para explicar em valores reais a performance do modelo de Machine Learning. As previsões têm uma margem de erro, para mais ou para menos. 
+
+Segue abaixo uma tablea, levando em consideração a margem de erro do modelo, apresentando assim o melhor e pior cenário da previsão de vendas.
 
 
-<img src="img/predictions.png" align="center" style="zoom:100%;" />
-
-[See entire table here in csv](output/stores-prediction.csv)
-
-As explained in the business statement part of sales for next 6 weeks will be use as investment in company expansion. Comparing sales from XGBoost model and the average model using test data we have:
-
-|Total Sales Baseline Model | Total Sales XGB Model | Real Sales | Difference Baseline | Difference XGB model |
-| --- | --- | --- | --- | --- |
-| $276,978,801.43 | $286,922,284.67 | $289,571,750.00 | $12,592,948.57 | $2,649,466.00 |
-
-Thus, the differente between the baseline model representing how sales would be calculated if the model did not exist and de model's prediction will be $9,943,482.57. Assuming all sales for the next 6 weeks would be used as the expansion investment, this will be the amount of money company will avoid to loan from the bank.
-
+<img src="img/scenarios.png" align="center" style="zoom:100%;" />
 
 # 10. Conclusion
-We can conclude that daily sales in Rossmann stores can be predicted by the model trained in this project and business team has validated the model to go to production. The phenomenon is time based and it was adapted for a forest regressor algorithm, the trained mode has achieved an 958.72 RMSE after cross validation and fine tuning. The total amount of money the project could save from loan if is implementeded would be $9,943,482.57. Some valuable insights can be further checked for other improvements, such as the extended promotions.
 
-# 11. Next Steps
+Após analizar os resultados conseguidos com o algorítmo, fica claro que o XGBoost é muito mais preciso em relação ao modelo que era usado anteriormente. O fenômeno que analisei neste projeto é complexo, envolvendo vários fatores que afetam as vendas. Foi necessário adaptar todo o projeto para este problema de série temporal.
 
-- Separate train and test data since from the very beginning of the project to avoid data leakage.
-- Look for external data such as weather, national events, macro indicators and etc.
-- Try to group stores by region.
-- Adjust competition_open_since_year/month to a single date for each store.
-- Try bayesian search method in fine tunning step.
-- Add a daily chart together with the prevision in telegram app.
+Algumas lojas, como pode ser viso to gráfico abaixo, são mais dificeis para fazer a predição. Seria necessário um outro projeto dedicado somente ao tratamento destes outliers. Um novo ciclo do CRISP-DM poderia ser dedicado a isso.
+<img src="img/prediction-final.png" align="center" style="zoom:100%;" />
 
+Aqui vemos a soma da predição de todas as lojas nas próximas 6 semana. Isso dá ao CFO uma visão muito mais clara que quanto dinheiro ele tem diponível para investir na expansão das lojas, dando mais segurança se for preciso recorrer a empréstimos bancários para dar inicio as obras.
 
-# 12. References
+<img src="img/totalp-predictions.png" align="center" style="zoom:100%;" />
 
-[https://www.kaggle.com/competitions/rossmann-store-sales](https://www.kaggle.com/competitions/rossmann-store-sales)
+# 11. Próximos passos
 
-[https://www.theretailbulletin.com/retail-solutions/case-study-rossmann-successful-supply-chain-coronavirus-crisis-management-11-12-2020/](https://www.theretailbulletin.com/retail-solutions/case-study-rossmann-successful-supply-chain-coronavirus-crisis-management-11-12-2020/)
-
-[https://www.forbes.com/sites/metabrown/2015/07/29/what-it-needs-to-know-about-the-data-mining-process/?sh=6fe236bb515f](https://www.forbes.com/sites/metabrown/2015/07/29/what-it-needs-to-know-about-the-data-mining-process/?sh=6fe236bb515f)
-
-[https://www.kaggle.com/competitions/rossmann-store-sales/discussion/17229](https://www.kaggle.com/competitions/rossmann-store-sales/discussion/17229)
+- Procure dados externos como clima, eventos nacionais, indicadores macroeconomicos, entre outros.
+- Derivar novas features no processo de feature engineering.
+- Experimente o método de busca bayesiana na etapa de fine tunnig.
+- Adicionar gráfico e tabelas ao bot do telegram.
