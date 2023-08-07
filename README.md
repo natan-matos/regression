@@ -138,14 +138,14 @@ Neste ponto o modelo já está pronto para ir para produção e ser disponibiliz
 
 Aqui você pode ver o funcionamento da API:
 
-<img src="img/Screen_Recording_20230802_163716_Telegram_AdobeExpress_AdobeExpress.gif" align="center" style="zoom:100%;" />
+<img src="img/telegram-bot.gif" align="center" style="zoom:100%;" />
 
 # 9. Resultados de Negócio
 
-Uma parte importante de qualquer projeto de Data Science é traduzir 
-Considering MAE the best metric to explain performance to business team in absolutes terms, we have calculated worst and best scenario by adding or subtracting MAE from prediction. MAPE is the MAE in percentagem that helps explain relative error.
+Uma parte importante de qualquer projeto de Data Science é traduzir os perfomance em resultados reais de negócio. Para este projeto, MAE (Mean Absolute Error), foi a métrica escolhida para explicar em valores reais a performance do modelo de Machine Learning. As previsões têm uma margem de erro, para mais ou para menos. Segue abaixo uma tablea, levando em consideração a margem de erro do modelo, apresentando assim o melhor e pior cenário da previsão de vendas.
 
-<img src="img/sample-final-table.png" align="center" style="zoom:100%;" />
+
+<img src="img/predictions.png" align="center" style="zoom:100%;" />
 
 [See entire table here in csv](output/stores-prediction.csv)
 
