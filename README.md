@@ -121,32 +121,16 @@ Após o cross validation, essas são as performances reais dos modelos:
 
 <img src="img/corss-validation.png" align="center" style="zoom:10%;" />
 
-A média de vendas foi usada como medidade de base para previsão, isso nos permite ter um valor base para comprar outros modelos mais complexos. Como pode ser visto, os modelos lineares tiveram uma performance pior do que a média. Isso mostra que o fenômeno que buscamo modelar aquie é complexo e não linear.
-Apesar de a Random Forest ter performado melhor, o modelo escolhido foi o XGBoost, uma vez que o modelo gerado pela Random Forest pode ser muito grande, ocupando muito espaço em memória, gerando problemas no momento do deploy.
+A média de vendas foi usada como medida de base para previsão. Isso nos permite ter um valor base para comprar outros modelos mais complexos. Como pode ser visto, os modelos lineares tiveram uma performance inferior à média. Isso mostra que o fenômeno que buscamos modelar aqui é complexo e não linear.
+Uma observação deve ser feira. Apesar de a Random Forest ter performado melhor, o modelo escolhido foi o XGBoost. A razão para isso é que o modelo gerado pela Random Forest pode ser muito grande, ocupando muito espaço em memória, gerando problemas no momento do deploy.
 
 
-# 7. Model Performance
+# 7. Performance do Modelo & Fine Tunnig
 
-The strategy chosen for fine tunning was Random Search, since this is the first CRISP cycle and we want to deliver a first version of solution as soon as posible. After five iterations the best set of parameters were found:
+Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usada uma Random Forest. Após o modelo XGBoost ser treinado novamente com os hiperparâmetros encontrados, consegui chegar a performance final do modelo.
 
-```
-param_tuned = { 
-		n_estimators': 3000,
-		'eta': 0.03,
- 		'max_depth': 5,
-  		'subsample': 0.7,
-   		'colsample_bytree': 0.7,
-    		'min_child_weight': 3
-    		}
-```
+<img src="img/fina-model-xgboost.png" align="center" style="zoom:100%;" />
 
-Training the model again with the hyperparameters and cross validation we could find the final performance of trained model. This trained model was saved by pickle module to be send to production later.
-
-<img src="img/tunned-performance.png" align="center" style="zoom:100%;" />
-
-Plotting the feature importance, we can also observed what are the variables more important to the model.
-
-<img src="img/feature-importance.png" align="center" style="zoom:100%;" />
 
 # 8. Deployment
 After validation by business team the model was send to production, which means the model need to be available to final user. Throughout an API called 'handler.py created with Flask module, the model saved in previous step and the Rossmann class are requested. Rossmann class is responsable for data preparation and transformation. Deployment arquitecture is represented below.
