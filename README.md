@@ -119,7 +119,7 @@ Para encontrar a real performance, foi usada a técnica de cross validation para
 
 Após o cross validation, essas são as performances reais dos modelos:
 
-<img src="img/corss-validation.png" align="center" style="zoom:100%;" />
+<img src="img/corss-validation.png" align="center" style="zoom:10%;" />
 
 A média de vendas foi usada como medidade de base para previsão, isso nos permite ter um valor base para comprar outros modelos mais complexos. Como pode ser visto, os modelos lineares tiveram uma performance pior do que a média. Isso mostra que o fenômeno que buscamo modelar aquie é complexo e não linear.
 Apesar de a Random Forest ter performado melhor, o modelo escolhido foi o XGBoost, uma vez que o modelo gerado pela Random Forest pode ser muito grande, ocupando muito espaço em memória, gerando problemas no momento do deploy.
