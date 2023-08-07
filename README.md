@@ -140,7 +140,7 @@ After validation by business team the model was send to production, which means 
 
 Below you can see the telegram app working:
 
-<img src="img/animation.gif" align="center" style="zoom:45%;" />
+<img src="img/animation.gif" align="left" style="zoom:25%;" />
 
 # 9. Business Results
 
