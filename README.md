@@ -127,19 +127,20 @@ Uma observação deve ser feira. Apesar de a Random Forest ter performado melhor
 
 # 7. Performance do Modelo & Fine Tunnig
 
-Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usada uma Random Forest. Após o modelo XGBoost ser treinado novamente com os hiperparâmetros encontrados, consegui chegar a performance final do modelo.
+Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usada uma Random Forest. Em futuros ciclos do CRISP-DM novos hiperparâmetros podem ser testados, para melhorar ainda mais a performance do modelo de Machine Learning. Após o modelo XGBoost ser treinado novamente com os hiperparâmetros encontrados, consegui chegar a performance final do modelo.
 
 <img src="img/fina-model-xgboost.png" align="center" style="zoom:100%;" />
 
 
 # 8. Deployment
+
 After validation by business team the model was send to production, which means the model need to be available to final user. Throughout an API called 'handler.py created with Flask module, the model saved in previous step and the Rossmann class are requested. Rossmann class is responsable for data preparation and transformation. Deployment arquitecture is represented below.
 
 <img src="img/deploy-arquitecture.png" align="center" style="zoom:75%;" />
 
 Below you can see the telegram app working:
 
-<img src="img/telegram-app.gif" align="center" style="zoom:75%;" />
+<img src="img/animation.gif" align="center" style="zoom:75%;" />
 
 # 9. Business Results
 
