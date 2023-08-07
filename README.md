@@ -128,12 +128,13 @@ Segue abaixo uma tablea, levando em consideração a margem de erro do modelo, a
 
 <img src="img/scenarios.png" align="center" style="zoom:100%;" />
 
-# 10. Conclusion
+# 10. Conclusão
 
 Após analizar os resultados conseguidos com o algorítmo, fica claro que o XGBoost é muito mais preciso em relação ao modelo que era usado anteriormente. O fenômeno que analisei neste projeto é complexo, envolvendo vários fatores que afetam as vendas. Foi necessário adaptar todo o projeto para este problema de série temporal.
 
 Algumas lojas, como pode ser viso to gráfico abaixo, são mais dificeis para fazer a predição. Seria necessário um outro projeto dedicado somente ao tratamento destes outliers. Um novo ciclo do CRISP-DM poderia ser dedicado a isso.
 <img src="img/prediction-final.png" align="center" style="zoom:100%;" />
+
 
 Aqui vemos a soma da predição de todas as lojas nas próximas 6 semana. Isso dá ao CFO uma visão muito mais clara que quanto dinheiro ele tem diponível para investir na expansão das lojas, dando mais segurança se for preciso recorrer a empréstimos bancários para dar inicio as obras.
 
