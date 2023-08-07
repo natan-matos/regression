@@ -102,30 +102,27 @@ Algumas hipóteses de negócio foram levantadas, para serem validadas ou não. N
 
 # 6. Modelo de Machine Learnig Aplicado
 
-After modelling data using encoding and transformation, Boruta was used as a method of feature selection. The variables relevant to model according to Boruta were.
+Depois de modelar os dados usando as técnicas de encoding e nature transformation, o Boruta foi usado para selecionar as melhores features para o modelo. Aqui está a seleção das features mais relevantes para o modelo:
 
-['store', 'promo', 'store_type', 'assortment', 'competition_distance', 'competition_open_since_month',
- 'competition_open_since_year', 'promo2', 'promo2_since_week', 'promo2_since_year', 'competition_time_month',
- 'promo_time_week', 'day_of_week_sin', 'day_of_week_cos', 'month_cos', 'day_sin', 'day_cos', 'week_of_year_cos']
+['store','promo','store_type','assortment','competition_distance','competition_open_since_month','competition_open_since_year','promo2','promo2_since_week','promo2_since_year','competition_time_month','promo_time_week','day_of_week_sin','day_of_week_cos','month_sin','month_cos','day_sin','day_cos','week_of_year_sin','week_of_year_cos'']
 
-We also add 'month_sin' and 'week_of_year_sin' since they are related to their cosseno variables pairs.
-
-A total of five models were tested:
-* Average
-* Linear Regression
-* Lasso
+Em total, foram testados e comparados 5 modelos:
+* Média
+* Regressão Linear
+* Regressão Linear Regularizada
 * Random Forest
 * XGBoost
 
-To calculated real performance, cross validation methos was used. Since is a time based problem, we could not separate validation and training parts randomly. Thus, the final six weeks of data were separate for test only, and the rest were used in cross validation. The K number is the number of parts the cross validation data is separated. Note that for every unit added in K number the previous validation data is added to training and a new six weeks of data is agregated for validation.
+Para encontrar a real performance, foi usada a técnica de cross validation para séries temporáis, já que tempo é uma variável importante no nosso problema. Para isso, apenas as últimas 6 semanas foram separadas para test, e o resto dos dados foi separado em 5 partes para serem usados para treino e teste de forma que não fossem usados dados futuros para as previsões.
 
-<img src="img/cross-validation.png" style="zoom:100%;" />
+<img src="img/model_performance.png" style="zoom:100%;" />
 
-After cross validation, the real model performance could be observed as below:
+Após o cross validation, essas são as performances reais dos modelos:
 
-<img src="img/comparison-algorithms.png" align="center" style="zoom:100%;" />
+<img src="img/corss-validation.png" align="center" style="zoom:100%;" />
 
-Note that the Average Model have better performance than linear models, indicating that phenomenon is complex. Performance for Random Forest is slightly better than XGBoost Regressor, but the model chosen was XGBoost. The reason for this is simple, Random Forest generated a much larger model and for now the gain in memory use is better than a slightly increase in performance.
+A média de vendas foi usada como medidade de base para previsão, isso nos permite ter um valor base para comprar outros modelos mais complexos. Como pode ser visto, os modelos lineares tiveram uma performance pior do que a média. Isso mostra que o fenômeno que buscamo modelar aquie é complexo e não linear.
+Apesar de a Random Forest ter performado melhor, o modelo escolhido foi o XGBoost, uma vez que o modelo gerado pela Random Forest pode ser muito grande, ocupando muito espaço em memória, gerando problemas no momento do deploy.
 
 
 # 7. Model Performance
